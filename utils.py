@@ -36,4 +36,5 @@ def combine_label_batch(num0, num1, numt=0, order='01'):
         label_batch_all = np.row_stack((label_batch_0, label_batch_1, label_batch_t))
     else:
         label_batch_all = np.row_stack((label_batch_1, label_batch_0, label_batch_t))
+    label_batch_all = label_batch_all.astype('float32')
     return label_batch_all
